@@ -29,20 +29,14 @@ Parameters MUST be provided in the regular `application/x-www-form-urlencoded`
 format.
 
 
-### `receiving_hei_id` (required)
-
-SCHAC ID of the receiving HEI of the mobilities. This parameter MUST be
-required by the server even if the server covers only a single institution.
-
-
 ### `omobility_id` (repeatable, required)
 
 A list of identifiers (no more than `<max-omobility-ids>` items) of mobilities
 which the client wants to retrieve information on. All of these mobilities
-should be the mobilities of which the HEI provided in the `receiving_hei_id`
-parameter is the receiving partner of (otherwise, they will be ignored).
+should be the mobilities of which the HEI covered by the caller
+is the receiving partner of (otherwise, they will be ignored).
 
-Note, that mobilities in this API are identified by their *outgoing* mobility
+Note that mobilities in this API are identified by their *outgoing* mobility
 identifiers. These are the identifiers supplied by the sending HEI. This means
 that the receiving HEI can use this API to publish data regarding *only* those
 mobilities, which were previously published by the sending HEI via the Outgoing
@@ -52,7 +46,7 @@ This parameter is *repeatable*, so the request MAY contain multiple occurrences
 of it. The server is REQUIRED to process all of them.
 
 Server implementers provide their own chosen value of `<max-omobility-ids>` via
-their manifest entry (see [manifest-entry.xsd](manifest-entry.xsd)). Clients
+their manifest entry (see [manifest-entry.xsd](../manifest-entry.xsd)). Clients
 SHOULD parse this value (or assume it's equal to `1`).
 
 
@@ -97,7 +91,7 @@ Handling of invalid parameters
    access to). If the requester doesn't have access to none of the requested
    `omobility_ids`, an empty HTTP 200 `<response>` element MUST be returned.
 
- * Note, that currently clients have no way of telling the difference between
+ * Note that currently clients have no way of telling the difference between
    "this incoming mobility does not exist" and "it does exist, but I don't have
    access to read it". In both cases, the proper mobility element will simply
    be missing from the response.
@@ -114,7 +108,7 @@ Servers MUST respond with a valid XML document described by the
 further information.
 
 
-[develhub]: http://developers.erasmuswithoutpaper.eu/
+[develhub]: https://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [echo]: https://github.com/erasmus-without-paper/ewp-specs-api-echo
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling

@@ -17,6 +17,15 @@ mobilities.)
 Currently, this API describes mobilities **of one type only** - *Student
 Mobilities for Studies*. More types MAY be added in the future.
 
+If HEI provides any API from the following group:
+* Outgoing Mobilities
+* Outgoing Mobilities CNR
+* Outgoing Mobilities Stats
+* Incoming Mobilities
+* Incoming Mobilities CNR
+
+it MUST provide all APIs from this group.
+
 
 Reminder on vocabulary
 ----------------------
@@ -62,13 +71,7 @@ The details on each of these endpoints are described on separate pages of this
 API specification (use the links above).
 
 
-Workflows of changes in nomination and departure statuses
----------------------------------------------------------
-
-Mobility and its nomination have two different sets of statuses sent via Outgoing/Incoming Mobilities API get response. Example scenarios of status changes are presented in the [Outgoing Mobilities API readme file][statuses-changes].
-
-
-[develhub]: http://developers.erasmuswithoutpaper.eu/
+[develhub]: https://developers.erasmuswithoutpaper.eu/
 [statuses]: https://github.com/erasmus-without-paper/ewp-specs-management#statuses
 [registry-spec]: https://github.com/erasmus-without-paper/ewp-specs-api-registry
 [discovery-api]: https://github.com/erasmus-without-paper/ewp-specs-api-discovery
@@ -76,4 +79,3 @@ Mobility and its nomination have two different sets of statuses sent via Outgoin
 [error-handling]: https://github.com/erasmus-without-paper/ewp-specs-architecture#error-handling
 [institutions-api]: https://github.com/erasmus-without-paper/ewp-specs-api-institutions
 [sec-v2]: https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2
-[statuses-changes]: https://github.com/erasmus-without-paper/ewp-specs-api-omobilities#workflows-of-changes-in-nomination-and-departure-statuses
