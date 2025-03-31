@@ -4,6 +4,19 @@ Release notes
 This document describes all the changes made to the *Incoming Mobilities API*
 document, starting from its first beta draft version.
 
+
+2.0.0
+-----
+
+* Removed status and comment.
+* Removed reference to deleted "planned" dates.
+* All Outgoing and Incoming Mobilities APIs are required.
+* Made root mobility element name more generic.
+* Made sending CNRs mandatory.
+* Removed receiving_hei_id parameter.
+* Incremented namespace version.
+
+
 1.0.0
 -----
 
